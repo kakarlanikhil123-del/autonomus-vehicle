@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment files
+.env
+.env.*
+
+# Generated dataset
+sign_expansion/dataset_generated/
+
+# Backups
+sign_expansion/backups/
+*.bak
+*.backup
+
+# Temporary files
+*.tmp
+.DS_Store

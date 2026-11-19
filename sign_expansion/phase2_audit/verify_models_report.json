@@ -1,0 +1,157 @@
+{
+  "models": {
+    "best.pt": {
+      "path": "C:\\Users\\kakar\\OneDrive\\Desktop\\autonomus vehicle\\best.pt",
+      "exists": true,
+      "class_count": 14,
+      "classes": {
+        "0": "Green Light",
+        "1": "Red Light",
+        "2": "Speed Limit 100",
+        "3": "Speed Limit 110",
+        "4": "Speed Limit 120",
+        "5": "Speed Limit 20",
+        "6": "Speed Limit 30",
+        "7": "Speed Limit 40",
+        "8": "Speed Limit 50",
+        "9": "Speed Limit 60",
+        "10": "Speed Limit 70",
+        "11": "Speed Limit 80",
+        "12": "Speed Limit 90",
+        "13": "Stop"
+      },
+      "model_type": "detect"
+    },
+    "best_14class_backup.pt": {
+      "path": "C:\\Users\\kakar\\OneDrive\\Desktop\\autonomus vehicle\\best_14class_backup.pt",
+      "exists": true,
+      "class_count": 14,
+      "classes": {
+        "0": "Green Light",
+        "1": "Red Light",
+        "2": "Speed Limit 100",
+        "3": "Speed Limit 110",
+        "4": "Speed Limit 120",
+        "5": "Speed Limit 20",
+        "6": "Speed Limit 30",
+        "7": "Speed Limit 40",
+        "8": "Speed Limit 50",
+        "9": "Speed Limit 60",
+        "10": "Speed Limit 70",
+        "11": "Speed Limit 80",
+        "12": "Speed Limit 90",
+        "13": "Stop"
+      },
+      "model_type": "detect"
+    },
+    "yolov8s-best.pt": {
+      "path": "C:\\Users\\kakar\\OneDrive\\Desktop\\autonomus vehicle\\road-sign-detection-yolo\\yolov8s-best.pt",
+      "exists": true,
+      "class_count": 14,
+      "classes": {
+        "0": "Green Light",
+        "1": "Red Light",
+        "2": "Speed Limit 100",
+        "3": "Speed Limit 110",
+        "4": "Speed Limit 120",
+        "5": "Speed Limit 20",
+        "6": "Speed Limit 30",
+        "7": "Speed Limit 40",
+        "8": "Speed Limit 50",
+        "9": "Speed Limit 60",
+        "10": "Speed Limit 70",
+        "11": "Speed Limit 80",
+        "12": "Speed Limit 90",
+        "13": "Stop"
+      },
+      "model_type": "detect"
+    },
+    "infrastructure_detector.pt": {
+      "path": "C:\\Users\\kakar\\OneDrive\\Desktop\\autonomus vehicle\\sih2026-sankalp\\models\\infrastructure\\infrastructure_detector.pt",
+      "exists": true,
+      "class_count": 57,
+      "classes": {
+        "0": "-Road narrows on right",
+        "1": "50 mph speed limit",
+        "2": "Advance Direction",
+        "3": "Attention Please-",
+        "4": "Beware of children",
+        "5": "Built Up Area",
+        "6": "Bullock and Hand Cart Prohibited",
+        "7": "Bus Stop",
+        "8": "CYCLE ROUTE AHEAD WARNING",
+        "9": "Cycle Prohibited",
+        "10": "Dangerous Left Curve Ahead",
+        "11": "Dangerous Rright Curve Ahead",
+        "12": "End of all speed and passing limits",
+        "13": "Expressway Rout Marking",
+        "14": "FS 31 Entry Ramp for Expressway",
+        "15": "Filling Station",
+        "16": "Give Way",
+        "17": "Go Straight or Turn Right",
+        "18": "Go straight or turn left",
+        "19": "Height Limit",
+        "20": "Keep-Left",
+        "21": "Keep-Right",
+        "22": "Left Hand Curv",
+        "23": "Left Zig Zag Traffic",
+        "24": "Narrow Bridge",
+        "25": "No Entry",
+        "26": "No_Over_Taking",
+        "27": "Object Hazard Right",
+        "28": "Overtaking by trucks is prohibited",
+        "29": "Pedestrain Crossing",
+        "30": "Pedestrian Crossing",
+        "31": "Right Hand Curv",
+        "32": "Round-About",
+        "33": "STOP Sign",
+        "34": "School Ahead",
+        "35": "Side Road Right",
+        "36": "Single Chevron",
+        "37": "Slippery Road Ahead",
+        "38": "Speed Limit 20 KMPh",
+        "39": "Speed Limit 30 KMPh",
+        "40": "Stack type Advance Direction sign",
+        "41": "State Highway Route Marker",
+        "42": "Stop_Sign",
+        "43": "Straight Ahead Only",
+        "44": "Toilet",
+        "45": "Tractor Prohibited",
+        "46": "Traffic sign Not visibles",
+        "47": "Traffic_signal",
+        "48": "Truck traffic is prohibited",
+        "49": "Turn left ahead",
+        "50": "Turn right ahead",
+        "51": "Two Wheeler Prohibited",
+        "52": "Uneven Road",
+        "53": "other",
+        "54": "speed limit",
+        "55": "speed limit 20",
+        "56": "speed limit 80"
+      },
+      "model_type": "detect"
+    }
+  },
+  "protected_hashes": {
+    "best.pt": {
+      "expected": "C62E044A49BC095EDB3644794C7194062EBBE64D398A8141E41F29BE344AE721",
+      "actual": "C62E044A49BC095EDB3644794C7194062EBBE64D398A8141E41F29BE344AE721",
+      "match": true
+    },
+    "best_14class_backup.pt": {
+      "expected": "C62E044A49BC095EDB3644794C7194062EBBE64D398A8141E41F29BE344AE721",
+      "actual": "C62E044A49BC095EDB3644794C7194062EBBE64D398A8141E41F29BE344AE721",
+      "match": true
+    },
+    "yolov8s-best.pt": {
+      "expected": "C62E044A49BC095EDB3644794C7194062EBBE64D398A8141E41F29BE344AE721",
+      "actual": "C62E044A49BC095EDB3644794C7194062EBBE64D398A8141E41F29BE344AE721",
+      "match": true
+    },
+    "infrastructure_detector.pt": {
+      "expected": "7A71CDEE3C8E382DE5DEBE220ABD8EE499B6806E45255DBA80D69FB453C35837",
+      "actual": "7A71CDEE3C8E382DE5DEBE220ABD8EE499B6806E45255DBA80D69FB453C35837",
+      "match": true
+    }
+  }
+}

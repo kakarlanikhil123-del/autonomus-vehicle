@@ -1,0 +1,16 @@
+{
+  "best.pt": {
+    "image": "C:\\Users\\kakar\\OneDrive\\Desktop\\autonomus vehicle\\traffic_test\\test.jpg",
+    "detections": [],
+    "num_detections": 0,
+    "inference_seconds_first_run": 4.421,
+    "annotated_output": "C:\\Users\\kakar\\OneDrive\\Desktop\\autonomus vehicle\\sign_expansion\\phase2_audit\\outputs\\func_test_best.jpg"
+  },
+  "infrastructure_detector.pt": {
+    "image": "C:\\Users\\kakar\\OneDrive\\Desktop\\autonomus vehicle\\traffic_test\\test.jpg",
+    "detections": [],
+    "num_detections": 0,
+    "inference_seconds_first_run": 0.126,
+    "annotated_output": "C:\\Users\\kakar\\OneDrive\\Desktop\\autonomus vehicle\\sign_expansion\\phase2_audit\\outputs\\func_test_infrastructure_detector.jpg"
+  }
+}

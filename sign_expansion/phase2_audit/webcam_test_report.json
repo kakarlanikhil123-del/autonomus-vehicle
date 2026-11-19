@@ -1,0 +1,32 @@
+{
+  "camera_index": 0,
+  "backend": "CAP_DSHOW",
+  "opened": true,
+  "read_probe": true,
+  "frame_size": [
+    640,
+    480
+  ],
+  "frames_ok": 30,
+  "avg_ms_per_frame_fused": 243.1,
+  "fps_fused": 4.11,
+  "detections_during_test": [
+    "UNKNOWN / UNRECOGNISED SIGN",
+    "UNKNOWN / UNRECOGNISED SIGN",
+    "UNKNOWN / UNRECOGNISED SIGN",
+    "Green Traffic Light",
+    "Green Traffic Light",
+    "Green Traffic Light",
+    "UNKNOWN / UNRECOGNISED SIGN",
+    "Green Traffic Light",
+    "Green Traffic Light",
+    "Green Traffic Light",
+    "Green Traffic Light",
+    "UNKNOWN / UNRECOGNISED SIGN",
+    "UNKNOWN / UNRECOGNISED SIGN",
+    "UNKNOWN / UNRECOGNISED SIGN",
+    "Green Traffic Light",
+    "UNKNOWN / UNRECOGNISED SIGN",
+    "UNKNOWN / UNRECOGNISED SIGN"
+  ]
+}

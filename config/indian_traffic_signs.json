@@ -1,0 +1,1747 @@
+{
+  "catalogue_version": "1.0.0",
+  "created": "2026-11-16",
+  "description": "Canonical Indian traffic-sign catalogue. Recognition catalogue only; not a claim that every sign is officially standardised. Each entry records verification status honestly.",
+  "standards_reference": {
+    "primary": "MoRTH / IRC:67-2012 Code of Practice for Road Signs (3rd revision) - three categories: Mandatory/Regulatory, Cautionary/Warning, Informatory",
+    "status": "Category-level reference. Per-entry verification_status must still be checked against the official IRC:67-2012 sign plates before operational use.",
+    "speed_limits_note": "Indian speed-limit signage includes 20/30/40/50/60/70/80 km/h on urban roads and higher limits on expressways. Not every limit is used in every jurisdiction; classes here exist only because a trained model already has them, or as catalogue proposals."
+  },
+  "models": {
+    "best.pt": {
+      "path": "best.pt",
+      "sha256": "C62E044A49BC095EDB3644794C7194062EBBE64D398A8141E41F29BE344AE721",
+      "class_count": 14,
+      "classes": {
+        "0": "Green Light",
+        "1": "Red Light",
+        "2": "Speed Limit 100",
+        "3": "Speed Limit 110",
+        "4": "Speed Limit 120",
+        "5": "Speed Limit 20",
+        "6": "Speed Limit 30",
+        "7": "Speed Limit 40",
+        "8": "Speed Limit 50",
+        "9": "Speed Limit 60",
+        "10": "Speed Limit 70",
+        "11": "Speed Limit 80",
+        "12": "Speed Limit 90",
+        "13": "Stop"
+      },
+      "note": "best_14class_backup.pt and road-sign-detection-yolo/yolov8s-best.pt are byte-identical copies."
+    },
+    "infrastructure_detector.pt": {
+      "path": "sih2026-sankalp/models/infrastructure/infrastructure_detector.pt",
+      "sha256": "7A71CDEE3C8E382DE5DEBE220ABD8EE499B6806E45255DBA80D69FB453C35837",
+      "class_count": 57,
+      "classes": {
+        "0": "-Road narrows on right",
+        "1": "50 mph speed limit",
+        "2": "Advance Direction",
+        "3": "Attention Please-",
+        "4": "Beware of children",
+        "5": "Built Up Area",
+        "6": "Bullock and Hand Cart Prohibited",
+        "7": "Bus Stop",
+        "8": "CYCLE ROUTE AHEAD WARNING",
+        "9": "Cycle Prohibited",
+        "10": "Dangerous Left Curve Ahead",
+        "11": "Dangerous Rright Curve Ahead",
+        "12": "End of all speed and passing limits",
+        "13": "Expressway Rout Marking",
+        "14": "FS 31 Entry Ramp for Expressway",
+        "15": "Filling Station",
+        "16": "Give Way",
+        "17": "Go Straight or Turn Right",
+        "18": "Go straight or turn left",
+        "19": "Height Limit",
+        "20": "Keep-Left",
+        "21": "Keep-Right",
+        "22": "Left Hand Curv",
+        "23": "Left Zig Zag Traffic",
+        "24": "Narrow Bridge",
+        "25": "No Entry",
+        "26": "No_Over_Taking",
+        "27": "Object Hazard Right",
+        "28": "Overtaking by trucks is prohibited",
+        "29": "Pedestrain Crossing",
+        "30": "Pedestrian Crossing",
+        "31": "Right Hand Curv",
+        "32": "Round-About",
+        "33": "STOP Sign",
+        "34": "School Ahead",
+        "35": "Side Road Right",
+        "36": "Single Chevron",
+        "37": "Slippery Road Ahead",
+        "38": "Speed Limit 20 KMPh",
+        "39": "Speed Limit 30 KMPh",
+        "40": "Stack type Advance Direction sign",
+        "41": "State Highway Route Marker",
+        "42": "Stop_Sign",
+        "43": "Straight Ahead Only",
+        "44": "Toilet",
+        "45": "Tractor Prohibited",
+        "46": "Traffic sign Not visibles",
+        "47": "Traffic_signal",
+        "48": "Truck traffic is prohibited",
+        "49": "Turn left ahead",
+        "50": "Turn right ahead",
+        "51": "Two Wheeler Prohibited",
+        "52": "Uneven Road",
+        "53": "other",
+        "54": "speed limit",
+        "55": "speed limit 20",
+        "56": "speed limit 80"
+      }
+    },
+    "indian_traffic.pt": {
+      "path": "indian_traffic.pt",
+      "sha256": null,
+      "class_count": null,
+      "classes": {},
+      "note": "Referenced by indian_sign_test.py / check_indian_model.py but FILE NOT FOUND. Original 14/15-class and 57-class training datasets also not found in project."
+    }
+  },
+  "reverse_mapping": {
+    "best.pt::0": "traffic_light_green",
+    "best.pt::1": "traffic_light_red",
+    "best.pt::2": "speed_limit_100",
+    "best.pt::3": "speed_limit_110",
+    "best.pt::4": "speed_limit_120",
+    "best.pt::5": "speed_limit_20",
+    "best.pt::6": "speed_limit_30",
+    "best.pt::7": "speed_limit_40",
+    "best.pt::8": "speed_limit_50",
+    "best.pt::9": "speed_limit_60",
+    "best.pt::10": "speed_limit_70",
+    "best.pt::11": "speed_limit_80",
+    "best.pt::12": "speed_limit_90",
+    "best.pt::13": "stop",
+    "infrastructure_detector.pt::0": "road_narrows_right",
+    "infrastructure_detector.pt::2": "advance_direction",
+    "infrastructure_detector.pt::4": "children_ahead",
+    "infrastructure_detector.pt::5": "built_up_area",
+    "infrastructure_detector.pt::6": "bullock_cart_prohibited",
+    "infrastructure_detector.pt::7": "bus_stop",
+    "infrastructure_detector.pt::8": "cycle_crossing",
+    "infrastructure_detector.pt::9": "cycle_prohibited",
+    "infrastructure_detector.pt::10": "left_curve",
+    "infrastructure_detector.pt::11": "right_curve",
+    "infrastructure_detector.pt::12": "end_of_restrictions",
+    "infrastructure_detector.pt::13": "expressway_route_marking",
+    "infrastructure_detector.pt::14": "expressway_entry_ramp",
+    "infrastructure_detector.pt::15": "petrol_pump",
+    "infrastructure_detector.pt::16": "give_way",
+    "infrastructure_detector.pt::17": "go_straight_or_turn_right",
+    "infrastructure_detector.pt::18": "go_straight_or_turn_left",
+    "infrastructure_detector.pt::19": "height_limit",
+    "infrastructure_detector.pt::20": "keep_left",
+    "infrastructure_detector.pt::21": "keep_right",
+    "infrastructure_detector.pt::22": "left_curve",
+    "infrastructure_detector.pt::23": "zigzag_left",
+    "infrastructure_detector.pt::24": "narrow_bridge",
+    "infrastructure_detector.pt::25": "no_entry",
+    "infrastructure_detector.pt::26": "no_overtaking",
+    "infrastructure_detector.pt::27": "object_hazard_right",
+    "infrastructure_detector.pt::28": "no_truck_overtaking",
+    "infrastructure_detector.pt::29": "pedestrian_crossing",
+    "infrastructure_detector.pt::30": "pedestrian_crossing",
+    "infrastructure_detector.pt::31": "right_curve",
+    "infrastructure_detector.pt::32": "compulsory_roundabout",
+    "infrastructure_detector.pt::33": "stop",
+    "infrastructure_detector.pt::34": "school_ahead",
+    "infrastructure_detector.pt::35": "side_road_right",
+    "infrastructure_detector.pt::36": "chevron",
+    "infrastructure_detector.pt::37": "slippery_road",
+    "infrastructure_detector.pt::38": "speed_limit_20",
+    "infrastructure_detector.pt::39": "speed_limit_30",
+    "infrastructure_detector.pt::40": "stack_advance_direction",
+    "infrastructure_detector.pt::41": "state_highway_marker",
+    "infrastructure_detector.pt::42": "stop",
+    "infrastructure_detector.pt::43": "compulsory_go_straight",
+    "infrastructure_detector.pt::44": "toilet",
+    "infrastructure_detector.pt::45": "tractor_prohibited",
+    "infrastructure_detector.pt::46": "unrecognised_sign",
+    "infrastructure_detector.pt::47": "traffic_signals_ahead",
+    "infrastructure_detector.pt::48": "truck_prohibited",
+    "infrastructure_detector.pt::49": "turn_left_ahead",
+    "infrastructure_detector.pt::50": "turn_right_ahead",
+    "infrastructure_detector.pt::51": "two_wheeler_prohibited",
+    "infrastructure_detector.pt::52": "uneven_road",
+    "infrastructure_detector.pt::53": "unrecognised_sign",
+    "infrastructure_detector.pt::54": "speed_limit_unspecified",
+    "infrastructure_detector.pt::55": "speed_limit_20",
+    "infrastructure_detector.pt::56": "speed_limit_80"
+  },
+  "unmapped_model_classes": {
+    "infrastructure_detector.pt::1": {
+      "raw_name": "50 mph speed limit",
+      "reason": "Non-Indian variant (mph); deliberately not mapped to a km/h class."
+    },
+    "infrastructure_detector.pt::3": {
+      "raw_name": "Attention Please-",
+      "reason": "Ambiguous class name with no clear canonical sign; left unmapped."
+    }
+  },
+  "signs": [
+    {
+      "canonical_id": "stop",
+      "canonical_name": "Stop",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "stop sign"
+      ],
+      "advisory": "STOP",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 13
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 33
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 42
+        }
+      ],
+      "training_data_status": "model-supported with measured performance",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Duplicate infra classes 33/42 map to same canonical sign."
+    },
+    {
+      "canonical_id": "give_way",
+      "canonical_name": "Give Way",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "yield"
+      ],
+      "advisory": "GIVE WAY / SLOW DOWN",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 16
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "no_entry",
+      "canonical_name": "No Entry",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "entry prohibited"
+      ],
+      "advisory": "DO NOT ENTER",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 25
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "one_way",
+      "canonical_name": "One Way",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "one way traffic"
+      ],
+      "advisory": "FOLLOW ONE-WAY DIRECTION",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Distinct from No Entry; verify variant."
+    },
+    {
+      "canonical_id": "no_parking",
+      "canonical_name": "No Parking",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "parking prohibited"
+      ],
+      "advisory": "DO NOT PARK",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "no_stopping",
+      "canonical_name": "No Stopping",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "stopping prohibited"
+      ],
+      "advisory": "DO NOT STOP",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "height_limit",
+      "canonical_name": "Maximum Height",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "height limit",
+        "height restriction"
+      ],
+      "advisory": "DO NOT PROCEED IF VEHICLE EXCEEDS HEIGHT",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 19
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "width_limit",
+      "canonical_name": "Maximum Width",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "width limit"
+      ],
+      "advisory": "DO NOT PROCEED IF VEHICLE EXCEEDS WIDTH",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "weight_limit",
+      "canonical_name": "Maximum Weight",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "axle load limit",
+        "weight restriction"
+      ],
+      "advisory": "DO NOT PROCEED IF VEHICLE EXCEEDS WEIGHT",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "no_overtaking",
+      "canonical_name": "No Overtaking",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "overtaking prohibited"
+      ],
+      "advisory": "DO NOT OVERTAKE",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 26
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "no_truck_overtaking",
+      "canonical_name": "No Overtaking By Trucks",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "overtaking by trucks is prohibited"
+      ],
+      "advisory": "TRUCKS MUST NOT OVERTAKE",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 28
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "no_horn",
+      "canonical_name": "No Horn",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "horn prohibited",
+        "silence zone"
+      ],
+      "advisory": "DO NOT HORN",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "no_u_turn",
+      "canonical_name": "No U-Turn",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "u-turn prohibited"
+      ],
+      "advisory": "NO U-TURN",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "no_right_turn",
+      "canonical_name": "No Right Turn",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "DO NOT TURN RIGHT",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "no_left_turn",
+      "canonical_name": "No Left Turn",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "DO NOT TURN LEFT",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "keep_left",
+      "canonical_name": "Keep Left",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "KEEP LEFT",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 20
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "keep_right",
+      "canonical_name": "Keep Right",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "KEEP RIGHT",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 21
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "compulsory_go_straight",
+      "canonical_name": "Compulsory Go Straight",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "straight ahead only",
+        "one way ahead"
+      ],
+      "advisory": "GO STRAIGHT",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 43
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "go_straight_or_turn_left",
+      "canonical_name": "Go Straight Or Turn Left",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "GO STRAIGHT OR TURN LEFT ONLY",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 18
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "go_straight_or_turn_right",
+      "canonical_name": "Go Straight Or Turn Right",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "GO STRAIGHT OR TURN RIGHT ONLY",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 17
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "turn_left_ahead",
+      "canonical_name": "Turn Left Ahead",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "compulsory turn left ahead"
+      ],
+      "advisory": "TURN LEFT AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 49
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "turn_right_ahead",
+      "canonical_name": "Turn Right Ahead",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "compulsory turn right ahead"
+      ],
+      "advisory": "TURN RIGHT AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 50
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "compulsory_roundabout",
+      "canonical_name": "Compulsory Roundabout",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "roundabout",
+        "go around"
+      ],
+      "advisory": "GIVE WAY AT ROUNDABOUT",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 32
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "end_of_restrictions",
+      "canonical_name": "End Of All Restrictions",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "end of all speed and passing limits"
+      ],
+      "advisory": "RESTRICTIONS END",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 12
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "pedestrian_prohibited",
+      "canonical_name": "Pedestrian Prohibited",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "PEDESTRIANS MUST NOT ENTER",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "bullock_cart_prohibited",
+      "canonical_name": "Bullock Cart And Hand Cart Prohibited",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "bullock and hand cart prohibited"
+      ],
+      "advisory": "BULLOCK/HAND CARTS NOT PERMITTED",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 6
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "cycle_prohibited",
+      "canonical_name": "Cycle Prohibited",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "bicycles prohibited"
+      ],
+      "advisory": "CYCLES NOT PERMITTED",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 9
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "tractor_prohibited",
+      "canonical_name": "Tractor Prohibited",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "TRACTORS NOT PERMITTED",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 45
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "two_wheeler_prohibited",
+      "canonical_name": "Two Wheeler Prohibited",
+      "category": "A_regulatory",
+      "alternative_names": [],
+      "advisory": "TWO-WHEELERS NOT PERMITTED",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 51
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "truck_prohibited",
+      "canonical_name": "Truck Prohibited",
+      "category": "A_regulatory",
+      "alternative_names": [
+        "trucks prohibited"
+      ],
+      "advisory": "TRUCKS NOT PERMITTED",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 48
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "left_curve",
+      "canonical_name": "Left Curve Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "dangerous left curve ahead",
+        "left hand curve"
+      ],
+      "advisory": "SLOW DOWN - LEFT CURVE AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 10
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 22
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Duplicate infra classes 10/22."
+    },
+    {
+      "canonical_id": "right_curve",
+      "canonical_name": "Right Curve Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "dangerous right curve ahead",
+        "right hand curve"
+      ],
+      "advisory": "SLOW DOWN - RIGHT CURVE AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 11
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 31
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Infra class 11 has typo 'Rright'; duplicate 11/31."
+    },
+    {
+      "canonical_id": "hairpin_bend",
+      "canonical_name": "Hairpin Bend",
+      "category": "B_warning",
+      "alternative_names": [],
+      "advisory": "SLOW DOWN - HAIRPIN BEND",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "steep_ascent",
+      "canonical_name": "Steep Ascent",
+      "category": "B_warning",
+      "alternative_names": [
+        "steep hill upwards"
+      ],
+      "advisory": "USE LOW GEAR",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "steep_descent",
+      "canonical_name": "Steep Descent",
+      "category": "B_warning",
+      "alternative_names": [
+        "steep hill downwards"
+      ],
+      "advisory": "USE LOW GEAR - DO NOT RIDE BRAKES",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "narrow_road",
+      "canonical_name": "Narrow Road",
+      "category": "B_warning",
+      "alternative_names": [
+        "road narrows"
+      ],
+      "advisory": "SLOW DOWN - NARROW ROAD",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "road_narrows_right",
+      "canonical_name": "Road Narrows On Right",
+      "category": "B_warning",
+      "alternative_names": [
+        "road narrows on right"
+      ],
+      "advisory": "SLOW DOWN - ROAD NARROWS AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 0
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "narrow_bridge",
+      "canonical_name": "Narrow Bridge",
+      "category": "B_warning",
+      "alternative_names": [
+        "narrow bridge ahead"
+      ],
+      "advisory": "SLOW DOWN - NARROW BRIDGE AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 24
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "slippery_road",
+      "canonical_name": "Slippery Road",
+      "category": "B_warning",
+      "alternative_names": [
+        "slippery road ahead"
+      ],
+      "advisory": "REDUCE SPEED",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 37
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "uneven_road",
+      "canonical_name": "Uneven Road",
+      "category": "B_warning",
+      "alternative_names": [],
+      "advisory": "REDUCE SPEED",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 52
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "hump_ahead",
+      "canonical_name": "Hump / Speed Breaker Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "speed breaker",
+        "hump or rough road"
+      ],
+      "advisory": "REDUCE SPEED - SPEED BREAKER",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "school_ahead",
+      "canonical_name": "School Ahead",
+      "category": "B_warning",
+      "alternative_names": [],
+      "advisory": "SLOW DOWN - WATCH FOR CHILDREN",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 34
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "children_ahead",
+      "canonical_name": "Children Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "beware of children"
+      ],
+      "advisory": "SLOW DOWN - WATCH FOR CHILDREN",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 4
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "pedestrian_crossing",
+      "canonical_name": "Pedestrian Crossing",
+      "category": "B_warning",
+      "alternative_names": [
+        "pedestrian crossing ahead"
+      ],
+      "advisory": "WATCH FOR PEDESTRIANS",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 29
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 30
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Infra class 29 has typo 'Pedestrain'; duplicate 29/30."
+    },
+    {
+      "canonical_id": "cycle_crossing",
+      "canonical_name": "Cycle Crossing Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "cycle route ahead warning"
+      ],
+      "advisory": "WATCH FOR CYCLISTS",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 8
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Model class is a cycle-route warning; exact variant to verify."
+    },
+    {
+      "canonical_id": "cattle_ahead",
+      "canonical_name": "Cattle Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "loose cattle"
+      ],
+      "advisory": "SLOW DOWN - LOOSE CATTLE",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "men_at_work",
+      "canonical_name": "Men At Work",
+      "category": "B_warning",
+      "alternative_names": [
+        "road works",
+        "road work ahead"
+      ],
+      "advisory": "CAUTION - ROAD WORKS",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "falling_rocks",
+      "canonical_name": "Falling Rocks",
+      "category": "B_warning",
+      "alternative_names": [
+        "falling rock zone"
+      ],
+      "advisory": "CAUTION - FALLING ROCKS",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "cross_roads",
+      "canonical_name": "Cross Roads Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "major cross road"
+      ],
+      "advisory": "SLOW DOWN - CROSS ROADS",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "side_road_right",
+      "canonical_name": "Side Road Right",
+      "category": "B_warning",
+      "alternative_names": [
+        "side road junction right"
+      ],
+      "advisory": "SLOW DOWN - JUNCTION AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 35
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "roundabout_ahead",
+      "canonical_name": "Roundabout Ahead",
+      "category": "B_warning",
+      "alternative_names": [],
+      "advisory": "SLOW DOWN - ROUNDABOUT AHEAD",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "traffic_signals_ahead",
+      "canonical_name": "Traffic Signals Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "traffic signal ahead"
+      ],
+      "advisory": "SLOW DOWN - SIGNALS AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 47
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Class name 'Traffic_signal' is ambiguous; treated as the warning sign, NOT a live light state."
+    },
+    {
+      "canonical_id": "railway_crossing",
+      "canonical_name": "Railway Crossing Ahead",
+      "category": "B_warning",
+      "alternative_names": [
+        "level crossing"
+      ],
+      "advisory": "SLOW DOWN - RAILWAY CROSSING",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "dangerous_intersection",
+      "canonical_name": "Dangerous Intersection",
+      "category": "B_warning",
+      "alternative_names": [],
+      "advisory": "SLOW DOWN - DANGEROUS INTERSECTION",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "proposed - not yet verified against IRC:67-2012",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "zigzag_left",
+      "canonical_name": "Zigzag Road Left",
+      "category": "B_warning",
+      "alternative_names": [
+        "left zig zag traffic"
+      ],
+      "advisory": "SLOW DOWN - ZIGZAG AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 23
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "chevron",
+      "canonical_name": "Chevron Board",
+      "category": "B_warning",
+      "alternative_names": [
+        "single chevron",
+        "direction chevron"
+      ],
+      "advisory": "FOLLOW CHEVRON DIRECTION",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 36
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "object_hazard_right",
+      "canonical_name": "Object Hazard Right",
+      "category": "B_warning",
+      "alternative_names": [],
+      "advisory": "CAUTION - OBSTRUCTION",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 27
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "parking",
+      "canonical_name": "Parking",
+      "category": "C_informatory",
+      "alternative_names": [
+        "parking place"
+      ],
+      "advisory": "PARKING AREA",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "bus_stop",
+      "canonical_name": "Bus Stop",
+      "category": "C_informatory",
+      "alternative_names": [],
+      "advisory": "BUS STOP AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 7
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "hospital",
+      "canonical_name": "Hospital",
+      "category": "C_informatory",
+      "alternative_names": [
+        "first aid post"
+      ],
+      "advisory": "HOSPITAL / FIRST AID NEARBY",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "first_aid",
+      "canonical_name": "First Aid",
+      "category": "C_informatory",
+      "alternative_names": [],
+      "advisory": "FIRST AID NEARBY",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "petrol_pump",
+      "canonical_name": "Petrol Pump",
+      "category": "C_informatory",
+      "alternative_names": [
+        "filling station"
+      ],
+      "advisory": "PETROL PUMP AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 15
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "restaurant",
+      "canonical_name": "Restaurant",
+      "category": "C_informatory",
+      "alternative_names": [],
+      "advisory": "RESTAURANT AHEAD",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "telephone",
+      "canonical_name": "Telephone",
+      "category": "C_informatory",
+      "alternative_names": [],
+      "advisory": "TELEPHONE AHEAD",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "toilet",
+      "canonical_name": "Public Toilet",
+      "category": "C_informatory",
+      "alternative_names": [
+        "toilet"
+      ],
+      "advisory": "TOILET AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 44
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "railway_station",
+      "canonical_name": "Railway Station",
+      "category": "C_informatory",
+      "alternative_names": [],
+      "advisory": "RAILWAY STATION AHEAD",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "airport",
+      "canonical_name": "Airport",
+      "category": "C_informatory",
+      "alternative_names": [],
+      "advisory": "AIRPORT AHEAD",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "advance_direction",
+      "canonical_name": "Advance Direction Sign",
+      "category": "C_informatory",
+      "alternative_names": [
+        "advance direction"
+      ],
+      "advisory": "ROUTE INFORMATION",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 2
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "stack_advance_direction",
+      "canonical_name": "Stack Type Advance Direction Sign",
+      "category": "C_informatory",
+      "alternative_names": [
+        "stack type advance direction sign"
+      ],
+      "advisory": "ROUTE INFORMATION",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 40
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "state_highway_marker",
+      "canonical_name": "State Highway Route Marker",
+      "category": "C_informatory",
+      "alternative_names": [],
+      "advisory": "STATE HIGHWAY ROUTE MARKER",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 41
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "expressway_route_marking",
+      "canonical_name": "Expressway Route Marking",
+      "category": "C_informatory",
+      "alternative_names": [
+        "expressway rout marking"
+      ],
+      "advisory": "EXPRESSWAY ROUTE MARKER",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 13
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "built_up_area",
+      "canonical_name": "Built Up Area",
+      "category": "C_informatory",
+      "alternative_names": [],
+      "advisory": "ENTERING BUILT-UP AREA",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 5
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "expressway_entry_ramp",
+      "canonical_name": "Expressway Entry Ramp",
+      "category": "C_informatory",
+      "alternative_names": [
+        "fs 31 entry ramp for expressway"
+      ],
+      "advisory": "EXPRESSWAY ENTRY AHEAD",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 14
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_20",
+      "canonical_name": "Speed Limit 20",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 20 kmph",
+        "speed limit 20 km/h"
+      ],
+      "advisory": "OBSERVE 20 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 5
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 38
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 55
+        }
+      ],
+      "training_data_status": "model-supported with measured performance",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_30",
+      "canonical_name": "Speed Limit 30",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 30 kmph",
+        "speed limit 30 km/h"
+      ],
+      "advisory": "OBSERVE 30 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 6
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 39
+        }
+      ],
+      "training_data_status": "model-supported with measured performance",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_40",
+      "canonical_name": "Speed Limit 40",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 40 kmph",
+        "speed limit 40 km/h"
+      ],
+      "advisory": "OBSERVE 40 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 7
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_50",
+      "canonical_name": "Speed Limit 50",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 50 kmph",
+        "speed limit 50 km/h"
+      ],
+      "advisory": "OBSERVE 50 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 8
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_60",
+      "canonical_name": "Speed Limit 60",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 60 kmph",
+        "speed limit 60 km/h"
+      ],
+      "advisory": "OBSERVE 60 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 9
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_70",
+      "canonical_name": "Speed Limit 70",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 70 kmph",
+        "speed limit 70 km/h"
+      ],
+      "advisory": "OBSERVE 70 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 10
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_80",
+      "canonical_name": "Speed Limit 80",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 80 kmph",
+        "speed limit 80 km/h"
+      ],
+      "advisory": "OBSERVE 80 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 11
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 56
+        }
+      ],
+      "training_data_status": "model-supported with measured performance",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_90",
+      "canonical_name": "Speed Limit 90",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 90 kmph",
+        "speed limit 90 km/h"
+      ],
+      "advisory": "OBSERVE 90 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 12
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_100",
+      "canonical_name": "Speed Limit 100",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 100 kmph",
+        "speed limit 100 km/h"
+      ],
+      "advisory": "OBSERVE 100 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 2
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_110",
+      "canonical_name": "Speed Limit 110",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 110 kmph",
+        "speed limit 110 km/h"
+      ],
+      "advisory": "OBSERVE 110 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 3
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_120",
+      "canonical_name": "Speed Limit 120",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit 120 kmph",
+        "speed limit 120 km/h"
+      ],
+      "advisory": "OBSERVE 120 KM/H LIMIT",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 4
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "speed_limit_unspecified",
+      "canonical_name": "Speed Limit (value unspecified)",
+      "category": "D_speed_limit",
+      "alternative_names": [
+        "speed limit"
+      ],
+      "advisory": "DISPLAY THE DETECTED SPEED LIMIT (OCR REQUIRED)",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 54
+        }
+      ],
+      "training_data_status": "model-supported with measured performance",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Generic class; number must be read by OCR. Infra class 1 '50 mph speed limit' appears to be a non-Indian variant and is NOT mapped to a km/h class."
+    },
+    {
+      "canonical_id": "traffic_light_red",
+      "canonical_name": "Red Traffic Light",
+      "category": "E_traffic_light",
+      "alternative_names": [
+        "red light"
+      ],
+      "advisory": "STOP",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 1
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "traffic_light_green",
+      "canonical_name": "Green Traffic Light",
+      "category": "E_traffic_light",
+      "alternative_names": [
+        "green light"
+      ],
+      "advisory": "PROCEED ONLY IF INTERSECTION AND PATH ARE CLEAR",
+      "model_support": [
+        {
+          "source_model": "best.pt",
+          "source_class_id": 0
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": null
+    },
+    {
+      "canonical_id": "traffic_light_yellow",
+      "canonical_name": "Yellow / Amber Traffic Light",
+      "category": "E_traffic_light",
+      "alternative_names": [
+        "yellow light",
+        "amber light"
+      ],
+      "advisory": "CAUTION - PREPARE TO STOP WHERE SAFE",
+      "model_support": [],
+      "training_data_status": "no labelled training data in project",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "NO trained model class and NO labelled data. Interface exists; recognition NOT claimed."
+    },
+    {
+      "canonical_id": "unrecognised_sign",
+      "canonical_name": "Unrecognised Sign",
+      "category": "U_unrecognised",
+      "alternative_names": [
+        "other",
+        "traffic sign not visibles",
+        "unknown"
+      ],
+      "advisory": "SIGN NOT RECOGNISED",
+      "model_support": [
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 46
+        },
+        {
+          "source_model": "infrastructure_detector.pt",
+          "source_class_id": 53
+        }
+      ],
+      "training_data_status": "model-supported (original training dataset missing from project)",
+      "verification_status": "standardized (MoRTH/IRC:67-2012 - verify exact variant)",
+      "duplicate_of": null,
+      "note": "Model 'other'/'not visible' classes deliberately bucketed as UNKNOWN, never coerced to a real sign."
+    }
+  ]
+}

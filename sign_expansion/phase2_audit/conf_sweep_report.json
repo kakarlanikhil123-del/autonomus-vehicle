@@ -1,0 +1,180 @@
+{
+  "best14/traffic_test": {
+    "conf_0.1": [],
+    "conf_0.15": [],
+    "conf_0.2": [],
+    "conf_0.3": [],
+    "conf_0.5": []
+  },
+  "best14/stop_test": {
+    "conf_0.1": [
+      {
+        "class": "Stop",
+        "confidence": 0.927,
+        "box": [
+          49,
+          11,
+          81,
+          50
+        ]
+      }
+    ],
+    "conf_0.15": [
+      {
+        "class": "Stop",
+        "confidence": 0.927,
+        "box": [
+          49,
+          11,
+          81,
+          50
+        ]
+      }
+    ],
+    "conf_0.2": [
+      {
+        "class": "Stop",
+        "confidence": 0.927,
+        "box": [
+          49,
+          11,
+          81,
+          50
+        ]
+      }
+    ],
+    "conf_0.3": [
+      {
+        "class": "Stop",
+        "confidence": 0.927,
+        "box": [
+          49,
+          11,
+          81,
+          50
+        ]
+      }
+    ],
+    "conf_0.5": [
+      {
+        "class": "Stop",
+        "confidence": 0.927,
+        "box": [
+          49,
+          11,
+          81,
+          50
+        ]
+      }
+    ]
+  },
+  "infra57/traffic_test": {
+    "conf_0.1": [],
+    "conf_0.15": [],
+    "conf_0.2": [],
+    "conf_0.3": [],
+    "conf_0.5": []
+  },
+  "infra57/stop_test": {
+    "conf_0.1": [
+      {
+        "class": "Stop_Sign",
+        "confidence": 0.671,
+        "box": [
+          48,
+          9,
+          82,
+          48
+        ]
+      },
+      {
+        "class": "Traffic_signal",
+        "confidence": 0.476,
+        "box": [
+          29,
+          23,
+          70,
+          183
+        ]
+      }
+    ],
+    "conf_0.15": [
+      {
+        "class": "Stop_Sign",
+        "confidence": 0.671,
+        "box": [
+          48,
+          9,
+          82,
+          48
+        ]
+      },
+      {
+        "class": "Traffic_signal",
+        "confidence": 0.476,
+        "box": [
+          29,
+          23,
+          70,
+          183
+        ]
+      }
+    ],
+    "conf_0.2": [
+      {
+        "class": "Stop_Sign",
+        "confidence": 0.671,
+        "box": [
+          48,
+          9,
+          82,
+          48
+        ]
+      },
+      {
+        "class": "Traffic_signal",
+        "confidence": 0.476,
+        "box": [
+          29,
+          23,
+          70,
+          183
+        ]
+      }
+    ],
+    "conf_0.3": [
+      {
+        "class": "Stop_Sign",
+        "confidence": 0.671,
+        "box": [
+          48,
+          9,
+          82,
+          48
+        ]
+      },
+      {
+        "class": "Traffic_signal",
+        "confidence": 0.476,
+        "box": [
+          29,
+          23,
+          70,
+          183
+        ]
+      }
+    ],
+    "conf_0.5": [
+      {
+        "class": "Stop_Sign",
+        "confidence": 0.671,
+        "box": [
+          48,
+          9,
+          82,
+          48
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "voc_dir": "combined_training\\indian_dataset\\Annotations\\Annotations",
+  "num_xml": 150,
+  "bad_xml": [],
+  "unique_labels": {
+    "traffic_sign": 194
+  },
+  "empty_annotation_files": [
+    "Datacluster Traffic Sign (105).xml",
+    "Datacluster Traffic Sign (109).xml",
+    "Datacluster Traffic Sign (128).xml",
+    "Datacluster Traffic Sign (13).xml",
+    "Datacluster Traffic Sign (15).xml",
+    "Datacluster Traffic Sign (16).xml",
+    "Datacluster Traffic Sign (17).xml",
+    "Datacluster Traffic Sign (18).xml",
+    "Datacluster Traffic Sign (19).xml",
+    "Datacluster Traffic Sign (21).xml",
+    "Datacluster Traffic Sign (23).xml",
+    "Datacluster Traffic Sign (29).xml",
+    "Datacluster Traffic Sign (33).xml",
+    "Datacluster Traffic Sign (34).xml",
+    "Datacluster Traffic Sign (40).xml",
+    "Datacluster Traffic Sign (46).xml",
+    "Datacluster Traffic Sign (50).xml",
+    "Datacluster Traffic Sign (69).xml",
+    "Datacluster Traffic Sign (84).xml",
+    "Datacluster Traffic Sign (9).xml"
+  ],
+  "honest_interpretation": "Single generic label 'traffic_sign': this is NOT a labelled multi-class dataset and must not be used to train individual sign classes."
+}
